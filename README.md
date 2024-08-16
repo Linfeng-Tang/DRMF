@@ -4,7 +4,7 @@
 @inproceedings{Tang2024DRMF,
     title={DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior},
     author={Tang, Linfeng and Deng, Yuxin and Yi, Xunpeng and Yan, Qinglong and Yuan, Yixuan and Ma, Jiayi},
-    booktitle=ACMMM,
+    booktitle=Proceedings of the ACM International Conference on Multimedia,
     year={2024}
 }
 ```
@@ -220,7 +220,7 @@ python your_script.py --config 'Fusion.yml' \
 @inproceedings{Tang2024DRMF,
     title={DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior},
     author={Tang, Linfeng and Deng, Yuxin and Yi, Xunpeng and Yan, Qinglong and Yuan, Yixuan and Ma, Jiayi},
-    booktitle=ACMMM,
+    booktitle=Proceedings of the ACM International Conference on Multimedia,
     year={2024}
 }
 ```
