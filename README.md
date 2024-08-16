@@ -85,7 +85,7 @@ python test_fusion.py --config 'Fusion.yml' \
 3. Run the following script for training the DRCDMs:
 
 ```python
-##for training DRCDM for visible images on the LOL dataset
+## for training DRCDM for visible images on the LOL dataset
 python train_restoration.py --config 'Restoration.yml' \
                             --phase 'train' \
                             --data_type 'LOL' \
@@ -93,7 +93,7 @@ python train_restoration.py --config 'Restoration.yml' \
                             --data_dir 'data/LOL' \
                             --sampling_timesteps 20
 
-##for training DRCDM for infrared images on the MSRS dataset
+## for training DRCDM for infrared images on the MSRS dataset
 python train_restoration.py --config 'Restoration.yml' \
                             --phase 'train' \
                             --data_type 'IR' \
@@ -102,7 +102,7 @@ python train_restoration.py --config 'Restoration.yml' \
                             --sampling_timesteps 20
 
 
-##for training DRCDM for CT images on the Harvard dataset
+## for training DRCDM for CT images on the Harvard dataset
 python train_restoration.py --config 'Restoration.yml' \
                             --phase 'train' \
                             --data_type 'CT' \
@@ -111,7 +111,7 @@ python train_restoration.py --config 'Restoration.yml' \
                             --sampling_timesteps 20
 
 
-##for training DRCDM for MRI images on the Harvard dataset
+## for training DRCDM for MRI images on the Harvard dataset
 python train_restoration.py --config 'Restoration.yml' \
                             --phase 'train' \
                             --data_type 'MRI' \
@@ -167,7 +167,7 @@ python your_script.py --config 'Fusion.yml' \
 ## Motivation
 
 <p align="center">
-    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Example.png" alt="Demo" width="800" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
+    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Example.png" alt="Demo"  style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
 <p align="center">
     Fusion schematic in challenging scenarios for MMIF tasks. DDFM and DIVFusion are Diffusion-based and illumination-robust image fusion method, respectively. DiffLL and CAT are SOTA image restoration approeches
