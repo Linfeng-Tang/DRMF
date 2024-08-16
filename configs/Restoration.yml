@@ -1,0 +1,50 @@
+data:
+    dataset: "Restoration"
+    image_size: 64
+    channels: 3
+    num_workers: 32
+    conditional: True
+
+path:
+    log: "logs"
+    tb_logger: "tb_logger"
+    results: "results"
+    checkpoint: "checkpoint"
+
+model:
+    in_channels: 3
+    out_ch: 3
+    ch: 128
+    ch_mult: [1, 2, 3, 4]
+    num_res_blocks: 2
+    attn_resolutions: [16, ]
+    dropout: 0.0
+    ema_rate: 0.999
+    ema: True
+    resamp_with_conv: True
+
+diffusion:
+    beta_schedule: linear
+    beta_start: 0.0001
+    beta_end: 0.02
+    num_diffusion_timesteps: 1000
+
+training:
+    patch_n: 16
+    batch_size: 4
+    n_epochs: 37042
+    n_iters: 1000000
+    snapshot_freq: 5000
+    validation_freq: 2000
+    ckpt_freq: 20000
+
+sampling:
+    batch_size: 1
+    last_only: True
+
+optim:
+    weight_decay: 0.000
+    optimizer: "Adam"
+    lr: 0.00002
+    amsgrad: False
+    eps: 0.00000001
