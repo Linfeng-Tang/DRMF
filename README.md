@@ -19,24 +19,15 @@
 
 
 ## Virtual Environment
-
 ```python
-
 conda create -n DRMF python=3.9
-
 conda install -r requirement.txt
-
 ```
-
 ## Fast Testing
-
 1. Downloading the [pre-trained model](https://pan.baidu.com/s/1UZv9z6Gl9HuIXp3BHLEinQ?pwd=DRFM) and placing them in **./experiments** .
 2. Run the following script for fusion testing:
-
 ```python
-
 ## for practical infrared and visible image fusion
-
 python test_fusion.py --config 'Fusion.yml' \
                --phase 'fusion' \
                --fusion_type 'IVIF' \
@@ -89,7 +80,6 @@ python test_fusion.py --config 'Fusion.yml' \
 ## Training
 
 ### Training DRCDMs
-
 1. Construct pairs of degraded images and their corresponding high-quality version. (For example, '.\data\LOL\train\high' and '.\data\LOL\train\low' for low-light image enhancement)
 2. Edite **./configs/Restoration.yml** for setting hyper-parameters.
 3. Run the following script for training the DRCDMs:
@@ -132,7 +122,6 @@ python train_restoration.py --config 'Restoration.yml' \
 
 
 ## Training DPCM
-
 1. Run the following script to generate high quality reference images if high quality GTs are missing, such as normal visible images in the MSRS dataset:
 
 ```python
@@ -176,83 +165,58 @@ python your_script.py --config 'Fusion.yml' \
 ```
 
 ## Motivation
-<divalign="center">
-    <imgsrc="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Example.png"alt="Demo"width="800"  style="display:inline-block;margin-right:20px;margin-bottom:20px;">
-</div>
-
+<p align="center">
+    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Example.png" alt="Demo" width="800" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
+</p>
+<p align="center">
+    Fusion schematic in challenging scenarios for MMIF tasks. DDFM and DIVFusion are Diffusion-based and illumination-robust image fusion method, respectively. DiffLL and CAT are SOTA image restoration approeches
+</p>
 ## Experiments
 ### Qualitative fusion results
-<divalign="center">
-    [imgsrc=&#34;https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/IVIF.png&#34;alt=&#34;MSRS&#34;style=&#34;display:inline-block;margin-right:20px;margin-bottom:20px;&#34;](imgsrc=%22https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/IVIF.png%22alt=%22MSRS%22style=%22display:inline-block;margin-right:20px;margin-bottom:20px;%22)
-</div>
-<palign="center">
-    `<em>`<spanstyle="font-size: 50px;">Visual comparison of DRMF with state-of-the-art approaches on practical and challenging fusion scenarios for IVIF`</em>`
+<p align="center">
+    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/IVIF.png" alt="IVIF" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
+</p>
+<p align="center">
+    Visual comparison of DRMF with state-of-the-art approaches on practical and challenging fusion scenarios for IVIF
 </p>
 
 <p align="center">
-    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/MIF.png" alt="M3FD" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
+    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/MIF.png" alt="MIF" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
-
 <p align="center">
-    *Visual comparison of our DRMF with state-of-the-art approaches on normal and challenging scenarios for MIF.*
+    Visual comparison of our DRMF with state-of-the-art approaches on normal and challenging scenarios for MIF
 </p>
 
 ### Quantitative fusion results
-
-<divalign="center">
-
-    [imgsrc=&#34;https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Quantitative.png&#34;alt=&#34;MSRS&#34;style=&#34;display:inline-block;margin-right:20px;margin-bottom:20px;&#34;](imgsrc=%22https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Quantitative.png%22alt=%22MSRS%22style=%22display:inline-block;margin-right:20px;margin-bottom:20px;%22)
-
-</div>
-
-<palign="center">
-
-    `<em>`<spanstyle="font-size: 50px;">Quantitative comparison of DRMF with state-of-the-art methods on IVIF and MIF tasks.`</em>`
-
+<p align="center">
+    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Quantitative.png" alt="Quantitative" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
+</p>
+<p align="center">
+    Quantitative comparison of DRMF with state-of-the-art methods on IVIF and MIF tasks
 </p>
 
 ### Pre-enhancement for other fusion methods
-
-<divalign="center">
-
-    [imgsrc=&#34;https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Pre-Enhancement.png&#34;alt=&#34;MSRS&#34;style=&#34;display:inline-block;margin-right:20px;margin-bottom:20px;&#34;](imgsrc=%22https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Pre-Enhancement.png%22alt=%22MSRS%22style=%22display:inline-block;margin-right:20px;margin-bottom:20px;%22)
-
-</div>
-
-<palign="center">
-
-    `<em>`<spanstyle="font-size: 50px;">Pre-enhancement for existing approaches.`</em>`
-
+<p align="center">
+    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Pre-Enhancement.png" alt="Quantitative" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
+</p>
+<p align="center">
+    Pre-enhancement for existing approaches
 </p>
 
 ### Object Detection
-
-<divalign="center">
-
-    [imgsrc=&#34;https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Detection.png&#34;alt=&#34;MSRS&#34;style=&#34;display:inline-block;margin-right:20px;margin-bottom:20px;&#34;](imgsrc=%22https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Detection.png%22alt=%22MSRS%22style=%22display:inline-block;margin-right:20px;margin-bottom:20px;%22)
-
-</div>
-
-<palign="center">
-
-    `<em>`<spanstyle="font-size: 50px;">Visual comparison of object detection on the LLVIP dataset.`</em>`
-
+<p align="center">
+    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Detection.png" alt="Quantitative" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
+</p>
+<p align="center">
+    Visual comparison of object detection on the LLVIP dataset
 </p>
 
 ## If this work is helpful to you, please cite it as：
-
 ```
-
 @inproceedings{Tang2024DRMF,
-
     title={DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior},
-
     author={Tang, Linfeng and Deng, Yuxin and Yi, Xunpeng and Yan, Qinglong and Yuan, Yixuan and Ma, Jiayi},
-
     booktitle=ACMMM,
-
     year={2024}
-
 }
-
 ```
