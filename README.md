@@ -10,18 +10,13 @@
 ```
 
 ## Over Framework
-
-<div>
-
-    [imgsrc=&#34;https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Framework.png&#34;alt=&#34;Framework&#34;style=&#34;display:inline-block;margin-right:20px;margin-bottom:20px;&#34;](imgsrc=%22https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Framework.png%22alt=%22Framework%22style=%22display:inline-block;margin-right:20px;margin-bottom:20px;%22)
-
-</div>
-
-<palign="center">
-
-    `<em>`The overall framework of the proposed DRMF.`</em>`
-
+<p align="center">
+    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Framework.png" alt="Framework" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
+<p align="center">
+    The overall framework of the proposed DRMF.
+</p>
+
 
 ## Virtual Environment
 
