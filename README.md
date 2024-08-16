@@ -27,8 +27,8 @@ conda install -r requirement.txt
 
 ## Fast Testing
 
-1. `Downloading the `
-2. `Run the following script for fusion testing:`
+1. Downloading the [pre-trained model](https://pan.baidu.com/s/1UZv9z6Gl9HuIXp3BHLEinQ?pwd=DRFM) and placing them in **./experiments** .
+2. Run the following script for fusion testing:
 
 ```python
 ## for practical infrared and visible image fusion
@@ -85,7 +85,7 @@ python test_fusion.py --config 'Fusion.yml' \
 
 ### Training DRCDMs
 
-1. Construct pairs of degraded images and their corresponding high-quality version. (For example, '.\data\LOL\train\high' and '.\data\LOL\train\low' for low-light image enhancement)
+1. `Construct pairs of degraded images and their corresponding high-quality version. (For example, '.\data\LOL\train\high' and '.\data\LOL\train\low' for low-light image enhancement)`
 2. Edite **./configs/Restoration.yml** for setting hyper-parameters.
 3. Run the following script for training the DRCDMs:
 
