@@ -14,7 +14,7 @@
     <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Framework.png" alt="Framework" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
 <p align="center">
-    The overall framework of the proposed DRMF.
+    The overall framework of the proposed DRMF
 </p>
 
 
@@ -165,14 +165,18 @@ python your_script.py --config 'Fusion.yml' \
 ```
 
 ## Motivation
+
 <p align="center">
     <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Example.png" alt="Demo" width="800" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
 <p align="center">
     Fusion schematic in challenging scenarios for MMIF tasks. DDFM and DIVFusion are Diffusion-based and illumination-robust image fusion method, respectively. DiffLL and CAT are SOTA image restoration approeches
 </p>
+
 ## Experiments
+
 ### Qualitative fusion results
+
 <p align="center">
     <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/IVIF.png" alt="IVIF" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
