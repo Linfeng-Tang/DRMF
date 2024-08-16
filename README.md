@@ -1,14 +1,12 @@
 # This is official Pytorch implementation of [DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior](https://openreview.net/forum?id=BwXrlBweab) (ACM MM 2024).
 
 ```
-
 @inproceedings{Tang2024DRMF,
     title={DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior},
     author={Tang, Linfeng and Deng, Yuxin and Yi, Xunpeng and Yan, Qinglong and Yuan, Yixuan and Ma, Jiayi},
     booktitle=ACMMM,
     year={2024}
 }
-
 ```
 
 ## Over Framework
@@ -104,60 +102,37 @@ python test_fusion.py --config 'Fusion.yml' \
 ```python
 ##for training DRCDM for visible images on the LOL dataset
 python train_restoration.py --config 'Restoration.yml' \
-
                             --phase 'train' \
-
                             --data_type 'LOL' \
-
                             --name 'Restoration_VI_LOL' \
-
                             --data_dir 'data/LOL' \
-
                             --sampling_timesteps 20
-
 
 ##for training DRCDM for infrared images on the MSRS dataset
 python train_restoration.py --config 'Restoration.yml' \
-
                             --phase 'train' \
-
                             --data_type 'IR' \
-
                             --name 'Restoration_IR_MSRS' \
-
                             --data_dir 'data/IVIF_degraded' \
-
                             --sampling_timesteps 20
 
 
 ##for training DRCDM for CT images on the Harvard dataset
 python train_restoration.py --config 'Restoration.yml' \
-
                             --phase 'train' \
-
                             --data_type 'CT' \
-
                             --name 'Restoration_CT' \
-
                             --data_dir 'data/MIF_degraded' \
-
                             --sampling_timesteps 20
 
 
 ##for training DRCDM for MRI images on the Harvard dataset
 python train_restoration.py --config 'Restoration.yml' \
-
                             --phase 'train' \
-
                             --data_type 'MRI' \
-
                             --name 'Restoration_MRI' \
-
                             --data_dir 'data/MIF_degraded' \
-
                             --sampling_timesteps 20
-
-
 ```
 
 
@@ -166,108 +141,65 @@ python train_restoration.py --config 'Restoration.yml' \
 1. Run the following script to generate high quality reference images if high quality GTs are missing, such as normal visible images in the MSRS dataset:
 
 ```python
-
 python test_restoration.py --config 'Restoration.yml' \
-
                            --phase 'test' \
-
                            --data_type 'VI' \
-
                            --name 'Restoration_VI_MSRS' \
-
                            --data_dir 'data/IVIF_degraded/train' \
-
                            --resume 'experiments/IVIF_degraded/VI_LOL.pth' \
-
                            --save_folder './Restoration' \
-
                            --sampling_timesteps 20 \
-
+```
 
 ## Training DPCM
 
 1. Run the following script to generate high quality reference images if high quality GTs are missing, such as normal visible images in the MSRS dataset:
 
 ```python
-
 python test_restoration.py --config 'Restoration.yml' \
-
                            --phase 'test' \
-
                            --data_type 'VI' \
-
                            --name 'Restoration_VI_MSRS' \
-
                            --data_dir 'data/IVIF_degraded/train' \
-
                            --resume 'experiments/IVIF_degraded/VI_LOL.pth' \
-
                            --save_folder './Restoration' \
-
-                           --sampling_timesteps 20 \
+                           --sampling_timesteps 20
 ```
-
-
-3. Construct pairs of degraded images and their corresponding high-quality version.
-4. Editing **./configs/Fusion.yml** for setting hyper-parameters.
-5. Run the following script for training the DPCM:
-
+2. Construct pairs of degraded images and their corresponding high-quality version.
+3. Editing **./configs/Fusion.yml** for setting hyper-parameters.
+4. Run the following script for training the DPCM:
 ```python
-
 ## for training DPCM for information aggragation on the MSRS dataset
-
 python your_script.py --config 'Fusion.yml' \
-
                       --phase 'train' \
-
                       --fusion_type 'IVIF' \
-
                       --name 'Fusion_DPCM' \
-
                       --data_dir 'data/IVIF_degraded' \
-
                       --resume_ir 'experiments/IVIF_degraded/IR_MSRS.pth' \
-
                       --resume_vi 'experiments/IVIF_degraded/VI_LOL.pth' \
-
                       --sampling_timesteps 5
-
 ```
 
 ## Motivation
-
 <divalign="center">
-
     <imgsrc="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Example.png"alt="Demo"width="800"  style="display:inline-block;margin-right:20px;margin-bottom:20px;">
-
 </div>
 
 ## Experiments
-
 ### Qualitative fusion results
-
 <divalign="center">
-
     [imgsrc=&#34;https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/IVIF.png&#34;alt=&#34;MSRS&#34;style=&#34;display:inline-block;margin-right:20px;margin-bottom:20px;&#34;](imgsrc=%22https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/IVIF.png%22alt=%22MSRS%22style=%22display:inline-block;margin-right:20px;margin-bottom:20px;%22)
-
 </div>
-
 <palign="center">
-
     `<em>`<spanstyle="font-size: 50px;">Visual comparison of DRMF with state-of-the-art approaches on practical and challenging fusion scenarios for IVIF`</em>`
-
 </p>
 
-<divalign="center">
+<p align="center">
+    <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/MIF.png" alt="M3FD" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
+</p>
 
-    [imgsrc=&#34;https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/MIF.png&#34;alt=&#34;M3FD&#34;style=&#34;display:inline-block;margin-right:20px;margin-bottom:20px;&#34;](imgsrc=%22https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/MIF.png%22alt=%22M3FD%22style=%22display:inline-block;margin-right:20px;margin-bottom:20px;%22)
-
-</div>
-
-<palign="center">
-
-    `<em>`<spanstyle="font-size: 50px;">Visual comparison of our DRMF with state-of-the-art approaches on normal and challenging scenarios for MIF.`</em>`
-
+<p align="center">
+    *Visual comparison of our DRMF with state-of-the-art approaches on normal and challenging scenarios for MIF.*
 </p>
 
 ### Quantitative fusion results
