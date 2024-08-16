@@ -10,6 +10,7 @@
 ```
 
 ## Over Framework
+
 <p align="center">
     <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Framework.png" alt="Framework" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
@@ -17,15 +18,18 @@
     The overall framework of the proposed DRMF
 </p>
 
-
 ## Virtual Environment
+
 ```python
 conda create -n DRMF python=3.9
 conda install -r requirement.txt
 ```
+
 ## Fast Testing
-1. Downloading the [pre-trained model](https://pan.baidu.com/s/1UZv9z6Gl9HuIXp3BHLEinQ?pwd=DRFM) and placing them in **./experiments** .
-2. Run the following script for fusion testing:
+
+1. `Downloading the `
+2. `Run the following script for fusion testing:`
+
 ```python
 ## for practical infrared and visible image fusion
 python test_fusion.py --config 'Fusion.yml' \
@@ -80,6 +84,7 @@ python test_fusion.py --config 'Fusion.yml' \
 ## Training
 
 ### Training DRCDMs
+
 1. Construct pairs of degraded images and their corresponding high-quality version. (For example, '.\data\LOL\train\high' and '.\data\LOL\train\low' for low-light image enhancement)
 2. Edite **./configs/Restoration.yml** for setting hyper-parameters.
 3. Run the following script for training the DRCDMs:
@@ -120,8 +125,8 @@ python train_restoration.py --config 'Restoration.yml' \
                             --sampling_timesteps 20
 ```
 
-
 ## Training DPCM
+
 1. Run the following script to generate high quality reference images if high quality GTs are missing, such as normal visible images in the MSRS dataset:
 
 ```python
@@ -149,9 +154,11 @@ python test_restoration.py --config 'Restoration.yml' \
                            --save_folder './Restoration' \
                            --sampling_timesteps 20
 ```
+
 2. Construct pairs of degraded images and their corresponding high-quality version.
 3. Editing **./configs/Fusion.yml** for setting hyper-parameters.
 4. Run the following script for training the DPCM:
+
 ```python
 ## for training DPCM for information aggragation on the MSRS dataset
 python your_script.py --config 'Fusion.yml' \
@@ -192,6 +199,7 @@ python your_script.py --config 'Fusion.yml' \
 </p>
 
 ### Quantitative fusion results
+
 <p align="center">
     <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Quantitative.png" alt="Quantitative" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
@@ -200,6 +208,7 @@ python your_script.py --config 'Fusion.yml' \
 </p>
 
 ### Pre-enhancement for other fusion methods
+
 <p align="center">
     <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Pre-Enhancement.png" alt="Quantitative" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
@@ -208,6 +217,7 @@ python your_script.py --config 'Fusion.yml' \
 </p>
 
 ### Object Detection
+
 <p align="center">
     <img src="https://github.com/Linfeng-Tang/DRMF/blob/main/Figures/Detection.png" alt="Quantitative" style="display:inline-block; margin-right:20px; margin-bottom:20px;" />
 </p>
@@ -216,6 +226,7 @@ python your_script.py --config 'Fusion.yml' \
 </p>
 
 ## If this work is helpful to you, please cite it as：
+
 ```
 @inproceedings{Tang2024DRMF,
     title={DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior},
