@@ -3,15 +3,10 @@
 ```
 
 @inproceedings{Tang2024DRMF,
-
     title={DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior},
-
     author={Tang, Linfeng and Deng, Yuxin and Yi, Xunpeng and Yan, Qinglong and Yuan, Yixuan and Ma, Jiayi},
-
     booktitle=ACMMM,
-
     year={2024}
-
 }
 
 ```
@@ -50,93 +45,52 @@ conda install -r requirement.txt
 ## for practical infrared and visible image fusion
 
 python test_fusion.py --config 'Fusion.yml' \
-
                --phase 'fusion' \
-
                --fusion_type 'IVIF' \
-
                --name 'IVIF_norm' \
-
                --data_dir 'data/IVIF_norm/val' \
-
                --resume_ir 'experiments/IVIF_norm/IR_MSRS.pth' \
-
                --resume_vi 'experiments/IVIF_norm/VI_LOL.pth' \
-
                --resume_weight 'experiments/Fusion/Fusion_DPCM.pth' \
-
                --save_folder './Results' \
-
                --sampling_timesteps 5
 
 ## for challenging infrared and visible image fusion
-
 python test_fusion.py --config 'Fusion.yml' \
-
                --phase 'fusion' \
-
                --fusion_type 'IVIF' \
-
                --name 'IVIF_degraded' \
-
                --data_dir 'data/IVIF_degraded/val' \
-
                --resume_ir 'experiments/IVIF_degraded/IR_MSRS.pth' \
-
                --resume_vi 'experiments/IVIF_degraded/VI_LOL.pth' \
-
                --resume_weight 'experiments/Fusion/Fusion_DPCM.pth' \
-
                --save_folder './Results' \
-
                --sampling_timesteps 5
 
 
 ## for practical medical image fusion
-
 python test_fusion.py --config 'Fusion.yml' \
-
                --phase 'fusion' \
-
                --fusion_type 'MIF' \
-
                --name 'MIF_norm' \
-
                --data_dir 'data/MIF_norm/val' \
-
                --resume_ir 'experiments/MIF_norm/CT.pth' \
-
                --resume_vi 'experiments/MIF_norm/MRI.pth' \
-
                --resume_weight 'experiments/Fusion/Fusion_DPCM.pth' \
-
                --save_folder './Results' \
-
                --sampling_timesteps 5
-
 
 ## for challenging medical image fusion
-
 python test_fusion.py --config 'Fusion.yml' \
-
                --phase 'fusion' \
-
                --fusion_type 'MIF' \
-
                --name 'MIF_degraded' \
-
                --data_dir 'data/MIF_degraded/val' \
-
                --resume_ir 'experiments/MIF_degraded/CT.pth' \
-
                --resume_vi 'experiments/MIF_degraded/MRI.pth' \
-
                --resume_weight 'experiments/Fusion/Fusion_DPCM.pth' \
-
                --save_folder './Results' \
-
                --sampling_timesteps 5
-
 ```
 
 ## Training
