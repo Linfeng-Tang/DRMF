@@ -102,8 +102,7 @@ python test_fusion.py --config 'Fusion.yml' \
 3. Run the following script for training the DRCDMs:
 
 ```python
-## for training DRCDM for visible images on the LOL dataset
-
+##for training DRCDM for visible images on the LOL dataset
 python train_restoration.py --config 'Restoration.yml' \
 
                             --phase 'train' \
@@ -117,8 +116,7 @@ python train_restoration.py --config 'Restoration.yml' \
                             --sampling_timesteps 20
 
 
-## for training DRCDM for infrared images on the MSRS dataset
-
+##for training DRCDM for infrared images on the MSRS dataset
 python train_restoration.py --config 'Restoration.yml' \
 
                             --phase 'train' \
@@ -132,8 +130,7 @@ python train_restoration.py --config 'Restoration.yml' \
                             --sampling_timesteps 20
 
 
-## for training DRCDM for CT images on the Harvard dataset
-
+##for training DRCDM for CT images on the Harvard dataset
 python train_restoration.py --config 'Restoration.yml' \
 
                             --phase 'train' \
@@ -147,8 +144,7 @@ python train_restoration.py --config 'Restoration.yml' \
                             --sampling_timesteps 20
 
 
-## for training DRCDM for MRI images on the Harvard dataset
-
+##for training DRCDM for MRI images on the Harvard dataset
 python train_restoration.py --config 'Restoration.yml' \
 
                             --phase 'train' \
@@ -161,7 +157,8 @@ python train_restoration.py --config 'Restoration.yml' \
 
                             --sampling_timesteps 20
 
-'''
+
+```
 
 
 ## Training DPCM
@@ -185,9 +182,6 @@ python test_restoration.py --config 'Restoration.yml' \
                            --save_folder './Restoration' \
 
                            --sampling_timesteps 20 \
-
-```
-
 
 
 ## Training DPCM
