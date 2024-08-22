@@ -238,4 +238,4 @@ If this work is helpful to you, please cite it as：
 ```
 
 ## Acknowledgements
-This code is built on (WeatherDiff)[https://github.com/IGITUGraz/WeatherDiffusion].
+This code is built on [WeatherDiff](https://github.com/IGITUGraz/WeatherDiffusion).
