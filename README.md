@@ -225,7 +225,8 @@ python your_script.py --config 'Fusion.yml' \
     Visual comparison of object detection on the LLVIP dataset
 </p>
 
-## If this work is helpful to you, please cite it as：
+## Citions
+If this work is helpful to you, please cite it as：
 
 ```
 @inproceedings{Tang2024DRMF,
@@ -235,3 +236,6 @@ python your_script.py --config 'Fusion.yml' \
     year={2024}
 }
 ```
+
+## Acknowledgements
+This code is built on (WeatherDiff)[https://github.com/IGITUGraz/WeatherDiffusion].
