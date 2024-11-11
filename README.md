@@ -1,4 +1,4 @@
-# This is official Pytorch implementation of [DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior](https://openreview.net/forum?id=BwXrlBweab) (ACM MM 2024).
+# This is official Pytorch implementation of [DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior](https://dl.acm.org/doi/pdf/10.1145/3664647.3681064) (ACM MM 2024).
 
 ```
 @inproceedings{Tang2024DRMF,
